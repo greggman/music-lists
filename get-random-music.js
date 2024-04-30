@@ -13,5 +13,6 @@ export default async function getRandomMusic() {
   const res = await fetch(url.href);
   const slice = await res.json();
   const data = slice[id % numPerSlice];
+  data.trackUrl = new URL(data.trackUrl, import.meta.url).href;
   return data;
 }
