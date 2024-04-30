@@ -5,7 +5,7 @@
 * format of json is
 
   ```js
-  type = {
+  type Track = {
     name?: string,    // name of track, if not provided it will be the base name of the url
     author?: string,  // name of author/artist/band
     url?: string,     // url for author's page
