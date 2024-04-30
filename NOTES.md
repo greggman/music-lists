@@ -10,5 +10,7 @@
     author?: string,  // name of author/artist/band
     url?: string,     // url for author's page
     infoUrl?: string, // url for info about the track
+    license?: string,     // license eg "CC-BY 4.0"
+    licenseUrl?: string,  // url for license  
   }
   ```

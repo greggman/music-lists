@@ -4,7 +4,10 @@ import path from 'path';
 const rootPath = 'tracks'
 
 const filenames = fs.readdirSync(rootPath, {recursive: true})
-  .filter(f => (f.includes('/') || f.includes('\\')) && f.endsWith('.json') && path.basename(f).length > 6)
+  .filter(f => (f.includes('/') || f.includes('\\')) &&
+                f.endsWith('.json') &&
+                !f.endsWith('/list.json') &&
+                path.basename(f).length > 6)
   .map(f => f.replaceAll('\\', '/'))
 
 const byLeaf = new Map();
@@ -15,7 +18,9 @@ for (const f of filenames) {
   leaves.push(f);
 }
 
+let total = 0;
 for (const [leaf, leaves] of byLeaf.entries()) {
+  total += leaves.length;
   leaves.sort();
   const tracks = [];
   for (const track of leaves) {
@@ -30,3 +35,8 @@ for (const [leaf, leaves] of byLeaf.entries()) {
   console.log('write:', outName);
   fs.writeFileSync(outName, JSON.stringify(tracks, null, 2));
 }
+
+const jsFilename = 'get-random-music.js';
+const js = fs.readFileSync(jsFilename, {encoding: 'utf8'});
+const newJs = js.replace(/numTracks = \d+/, `numTracks = ${total}`);
+fs.writeFileSync(jsFilename, newJs);
