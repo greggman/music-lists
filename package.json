@@ -1,0 +1,23 @@
+{
+  "name": "music-lists",
+  "version": "1.0.0",
+  "description": "",
+  "main": "get-random-music.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greggman/music-lists.git"
+  },
+  "keywords": [
+    "music"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greggman/music-lists/issues"
+  },
+  "homepage": "https://github.com/greggman/music-lists#readme"
+}

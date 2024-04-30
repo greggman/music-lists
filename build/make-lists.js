@@ -1,0 +1,32 @@
+import fs from 'fs';
+import path from 'path';
+
+const rootPath = 'tracks'
+
+const filenames = fs.readdirSync(rootPath, {recursive: true})
+  .filter(f => (f.includes('/') || f.includes('\\')) && f.endsWith('.json') && path.basename(f).length > 6)
+  .map(f => f.replaceAll('\\', '/'))
+
+const byLeaf = new Map();
+for (const f of filenames) {
+  const leaf = f.substring(0, 7);
+  const leaves = byLeaf.get(leaf) || [];
+  byLeaf.set(leaf, leaves);
+  leaves.push(f);
+}
+
+for (const [leaf, leaves] of byLeaf.entries()) {
+  leaves.sort();
+  const tracks = [];
+  for (const track of leaves) {
+    const data = JSON.parse(fs.readFileSync(path.join(rootPath, track), {encoding: 'utf-8'}));
+    const ext = path.extname(track);
+    const name = path.basename(track, ext);
+    data.name = data.name || name;
+    data.trackUrl = `${rootPath}/${path.dirname(track)}/${name}.mp3`;
+    tracks.push(data);
+  }
+  const outName = path.join(rootPath, leaf, 'list.json');
+  console.log('write:', outName);
+  fs.writeFileSync(outName, JSON.stringify(tracks, null, 2));
+}
