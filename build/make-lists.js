@@ -21,6 +21,10 @@ for (const f of filenames) {
 let total = 0;
 for (const [leaf, leaves] of byLeaf.entries()) {
   total += leaves.length;
+  if (leaves.length > 50) {
+    console.error(`more than 50 songs in: tracks/${leaf}`);
+    process.exit(1);
+  }
   leaves.sort();
   const tracks = [];
   for (const track of leaves) {

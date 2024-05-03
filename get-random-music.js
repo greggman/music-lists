@@ -1,4 +1,4 @@
-const numTracks = 7;
+const numTracks = 11;
 
 const numPerSlice = 50;
 

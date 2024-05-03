@@ -5,6 +5,7 @@
   "main": "get-random-music.js",
   "type": "module",
   "scripts": {
+    "build": "node build/make-lists.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

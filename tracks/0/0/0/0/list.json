@@ -1,5 +1,23 @@
 [
   {
+    "name": "Gasoline",
+    "author": "Prashan Subasinghe",
+    "url": "https://www.prashans.com/music",
+    "infoUrl": "https://soundcloud.com/shan22/gasoline",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/public-domain/cc0/",
+    "trackUrl": "tracks/0/0/0/0/01 - Prashan Subasinghe - Gasoline.mp3"
+  },
+  {
+    "name": "Danger",
+    "author": "Prashan Subasinghe",
+    "url": "https://www.prashans.com/music",
+    "infoUrl": "https://soundcloud.com/shan22/danger",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/public-domain/cc0/",
+    "trackUrl": "tracks/0/0/0/0/02 - Prashan Subasinghe - Danger.mp3"
+  },
+  {
     "author": "Kevin MacLeod",
     "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QL4T5W3SDDBZA",
     "name": "Arpent",
@@ -40,6 +58,22 @@
     "license": "CC-BY 4.0",
     "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
     "trackUrl": "tracks/0/0/0/0/Newer Wave.mp3"
+  },
+  {
+    "name": "Syncopated Salvation",
+    "author": "GMUDIO",
+    "url": "https://www.udio.com/creators/Greggman",
+    "infoUrl": "https://www.udio.com/songs/28CvAoNRzAdZs8S3houw6B",
+    "trackUrl": "tracks/0/0/0/0/Syncopated Salvation.mp3"
+  },
+  {
+    "author": "Arthur & Medic Remix",
+    "url": "https://twitter.com/ArthurandMedic",
+    "infoUrl": "https://soundcloud.com/argofox/voia-mochi-moshi-arthur-medic-remix",
+    "license": "CC-BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "name": "VOIA - Mochi Moshi (feat. Keii) (Arthur & Medic Remix)",
+    "trackUrl": "tracks/0/0/0/0/VOIA - Mochi Moshi (feat. Keii) (Arthur & Medic Remix).mp3"
   },
   {
     "name": "Voxel Revolution",
